@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(144, 169, 190); 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 1%, 19%);
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0px 0px 10px #0872af1a;
+}
+
+#pantalla {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3d6950 ;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6c7574;
+}
+
+button:last-child {
+    background-color: #d51748;
+}
+
+
+
+/* Estilos responsivos para móviles */
+@media (max-width: 600px) {
+    .calculator {
+        padding: 30px; /* Reduce el padding en pantallas pequeñas */
+    }
+    
+    #pantalla {
+        height: 50px;
+        font-size: 20px; /* Reduce el tamaño de la fuente de la pantalla */
+    }
+
+    button {
+        padding: 15px; /* Reduce el tamaño de los botones */
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .botones {
+        gap: 8px; /* Reduce el espacio entre los botones */
+    }
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 40px; /* Aún más compacto en pantallas muy pequeñas */
+    }
+
+    button {
+        padding: 12px; /* Botones más pequeños */
+        font-size: 14px; /* Fuente más pequeña */
+    }
+
+    #pantalla {
+        height: 40px;
+        font-size: 18px;
+    }
+}
